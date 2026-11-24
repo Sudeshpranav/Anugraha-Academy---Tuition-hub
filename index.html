@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anugraha Academy – Tuition Hub | Porur, Chennai</title>
+    <meta name="description" content="Small batches, clear concepts, and better marks. Expert tuition for classes 6 to 12 in Maths, Science, and English in Porur, Chennai." />
+    <meta property="og:title" content="Anugraha Academy – Tuition Hub" />
+    <meta property="og:description" content="Small batches, clear concepts, and better marks. Expert tuition in Porur, Chennai." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Google Fonts: Noto Sans Tamil & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --border-color: #e2e8f0;
+        --primary: #1d4ed8;
+        --primary-hover: #1e40af;
+        --accent: #d97706;
+        --accent-hover: #b45309;
+        --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        --header-bg: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-primary: #090d16;
+          --bg-secondary: #111827;
+          --bg-card: #1e293b;
+          --text-main: #f8fafc;
+          --text-muted: #94a3b8;
+          --border-color: #334155;
+          --primary: #3b82f6;
+          --primary-hover: #60a5fa;
+          --accent: #f59e0b;
+          --accent-hover: #fbbf24;
+          --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+          --header-bg: rgba(9, 13, 22, 0.9);
+        }
+      }
+
+      body {
+        font-family: 'Noto Sans Tamil', 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-main);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .text-primary { color: var(--primary); }
+      .bg-primary { background-color: var(--primary); }
+      .bg-primary:hover { background-color: var(--primary-hover); }
+      .text-accent { color: var(--accent); }
+      .bg-accent { background-color: var(--accent); }
+      .bg-accent:hover { background-color: var(--accent-hover); }
+
+      /* Scroll reveal animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      /* Hover card effect */
+      .hover-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-muted);
+      }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'media',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: '#1d4ed8',
+                accent: '#d97706',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="antialiased pb-20 md:pb-0">
+
+    <!-- 1. Small banner at the very top -->
+    <div class="bg-amber-500/10 border-b border-amber-500/20 text-amber-700 dark:text-amber-300 px-4 py-2 text-xs md:text-sm text-center font-medium sticky top-0 z-50 backdrop-blur-md">
+      <span data-en="Sample design made for Anugraha Academy. Items marked sample are placeholders." data-ta="அனுக்கிரகா அகாதமிக்காக உருவாக்கப்பட்ட மாதிரி வடிவமைப்பு. மாதிரி எனக் குறிக்கப்பட்டவை தற்காலிகமானவை.">
+        Sample design made for Anugraha Academy. Items marked sample are placeholders.
+      </span>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="sticky top-[37px] z-40 bg-[var(--header-bg)] backdrop-blur-md border-b border-[var(--border-color)] transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+            AA
+          </div>
+          <div>
+            <span class="font-bold text-lg tracking-tight block leading-tight" data-en="Anugraha Academy" data-ta="அனுக்கிரகா அகாதமி">Anugraha Academy</span>
+            <span class="text-xs text-[var(--text-muted)] font-medium block" data-en="Tuition Hub · Porur" data-ta="பயிற்சி மையம் · போரூர்">Tuition Hub · Porur</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a href="#courses" class="text-[var(--text-muted)] hover:text-blue-600 dark:hover:text-blue-400 transition-colors" data-en="Courses" data-ta="பாடங்கள்">Courses</a>
+          <a href="#methodology" class="text-[var(--text-muted)] hover:text-blue-600 dark:hover:text-blue-400 transition-colors" data-en="Why Us" data-ta="சிறப்பம்சங்கள்">Why Us</a>
+          <a href="#timings" class="text-[var(--text-muted)] hover:text-blue-600 dark:hover:text-blue-400 transition-colors" data-en="Timings" data-ta="நேரங்கள்">Timings</a>
+          <a href="#testimonials" class="text-[var(--text-muted)] hover:text-blue-600 dark:hover:text-blue-400 transition-colors" data-en="Testimonials" data-ta="கருத்துகள்">Testimonials</a>
+          <a href="#faq" class="text-[var(--text-muted)] hover:text-blue-600 dark:hover:text-blue-400 transition-colors" data-en="FAQ" data-ta="கேள்வி-பதில்">FAQ</a>
+        </nav>
+
+        <!-- Right actions: Language Toggle & CTA -->
+        <div class="flex items-center gap-3">
+          <button id="lang-toggle" onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg border border-[var(--border-color)] text-xs md:text-sm font-semibold hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 bg-[var(--bg-card)] shadow-sm cursor-pointer" aria-label="Switch Language">
+            <span>🌐</span> <span id="lang-label">தமிழ்</span>
+          </button>
+          <a href="#enquiry" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-lg shadow-blue-600/20 transition-all" data-en="Book Free Demo" data-ta="இலவச வகுப்பு">
+            Book Free Demo
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. Hero Section -->
+      <section class="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden bg-[var(--bg-secondary)]">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1d4ed8_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs md:text-sm font-semibold border border-blue-500/20">
+                <span>📍</span>
+                <span data-en="Tuition Hub · Porur, Chennai" data-ta="பயிற்சி மையம் · போரூர், சென்னை">Tuition Hub · Porur, Chennai</span>
+              </div>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                <span data-en="Small batches." data-ta="சிறிய வகுப்புகள்.">Small batches.</span>
+                <span class="text-blue-600 dark:text-blue-500 block sm:inline" data-en="Clear concepts." data-ta="தெளிவான புரிதல்.">Clear concepts.</span>
+                <span data-en="Better marks." data-ta="சிறந்த மதிப்பெண்கள்.">Better marks.</span>
+              </h1>
+              <p class="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" data-en="Expert coaching with regular weekly tests, dedicated doubt-clearing sessions, and monthly progress updates sent directly to parents." data-ta="வழக்கமான வாராந்திர தேர்வுகள், பிரத்யேக சந்தேக நிவர்த்தி வகுப்புகள் மற்றும் பெற்றோர்களுக்கு மாதந்தோறும் முன்னேற்ற அறிக்கைகளுடன் கூடிய சிறந்த பயிற்சி.">
+                Expert coaching with regular weekly tests, dedicated doubt-clearing sessions, and monthly progress updates sent directly to parents.
+              </p>
+              <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                <a href="#enquiry" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-xl shadow-blue-600/25 transition-all text-center text-base" data-en="Book a free demo class" data-ta="இலவச மாதிரி வகுப்பை பதிவு செய்யுங்கள்">
+                  Book a free demo class
+                </a>
+                <a href="#courses" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] hover:border-blue-600 hover:text-blue-600 font-semibold transition-all text-center text-base shadow-sm" data-en="See courses" data-ta="பாடங்களைக் காண்க">
+                  See courses
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero visual card -->
+            <div class="lg:col-span-5 reveal">
+              <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-2xl relative">
+                <div class="absolute -top-3 -right-3 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  <span data-en="Admissions Open" data-ta="சேர்க்கை நடைபெறுகிறது">Admissions Open</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                  <span>🎓</span> <span data-en="Why Anugraha Academy?" data-ta="அனுக்கிரகா அகாதமியின் சிறப்புகள்?">Why Anugraha Academy?</span>
+                </h3>
+                <ul class="space-y-4 text-sm font-medium text-[var(--text-muted)]">
+                  <li class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">✓</span>
+                    <span data-en="State Board & CBSE (Classes 6–12)" data-ta="சமச்சீர் கல்வி & சிபிஎஸ்இ (6 முதல் 12 ஆம் வகுப்பு)">State Board & CBSE (Classes 6–12)</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">✓</span>
+                    <span data-en="Experienced & Caring Faculty" data-ta="அனுபவமிக்க மற்றும் கனிவான ஆசிரியர்கள்">Experienced & Caring Faculty</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">✓</span>
+                    <span data-en="Monthly WhatsApp Progress Reports" data-ta="மாதாந்திர வாட்ஸ்அப் முன்னேற்ற அறிக்கை">Monthly WhatsApp Progress Reports</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">✓</span>
+                    <span data-en="Tamil & English Medium Support" data-ta="தமிழ் மற்றும் ஆங்கில வழி கல்வி">Tamil & English Medium Support</span>
+                  </li>
+                </ul>
+                <div class="mt-6 pt-6 border-t border-[var(--border-color)] flex items-center justify-between text-xs text-[var(--text-muted)]">
+                  <span data-en="Porur Junction, Chennai" data-ta="போரூர் சந்திப்பு, சென்னை">Porur Junction, Chennai</span>
+                  <span class="font-semibold text-blue-600 dark:text-blue-400" data-en="Call: 88383 40480" data-ta="அழைக்க: 88383 40480">Call: 88383 40480</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Four Stat Cards -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 reveal">
+            <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm text-center hover-card">
+              <div class="text-2xl md:text-3xl font-extrabold text-blue-600 mb-1">6–12</div>
+              <div class="text-xs md:text-sm text-[var(--text-muted)] font-medium" data-en="Classes covered" data-ta="வகுப்புகள்">Classes covered</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm text-center hover-card">
+              <div class="text-2xl md:text-3xl font-extrabold text-amber-500 mb-1">15</div>
+              <div class="text-xs md:text-sm text-[var(--text-muted)] font-medium" data-en="Students per batch (sample)" data-ta="வகுப்புக்கு மாணவர்கள் (மாதிரி)">Students per batch (sample)</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm text-center hover-card">
+              <div class="text-2xl md:text-3xl font-extrabold text-blue-600 mb-1">2</div>
+              <div class="text-xs md:text-sm text-[var(--text-muted)] font-medium" data-en="Languages: Tamil and English" data-ta="இரு மொழிகள்: தமிழ் & ஆங்கிலம்">Languages: Tamil and English</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm text-center hover-card">
+              <div class="text-2xl md:text-3xl font-extrabold text-amber-500 mb-1">1:1</div>
+              <div class="text-xs md:text-sm text-[var(--text-muted)] font-medium" data-en="Doubt-clearing time" data-ta="சந்தேக நிவர்த்தி நேரம்">Doubt-clearing time</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Courses Section -->
+      <section id="courses" class="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="Our Courses" data-ta="எங்கள் பாடங்கள்">Our Courses</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="Focused Coaching for Academic Excellence" data-ta="கல்வித் திறனுக்கான சிறப்பு பயிற்சி">Focused Coaching for Academic Excellence</h2>
+          <p class="text-[var(--text-muted)] text-base md:text-lg" data-en="Comprehensive subject coaching tailored to school syllabi with emphasis on conceptual clarity and problem solving." data-ta="தெளிவான புரிதல் மற்றும் சிக்கல்களைத் தீர்க்கும் திறனுடன் கூடிய சிறப்பான பாடப் பயிற்சி.">
+            Comprehensive subject coaching tailored to school syllabi with emphasis on conceptual clarity and problem solving.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Maths -->
+          <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-3xl mb-6 shadow-sm">
+                📐
+              </div>
+              <h3 class="text-xl font-bold mb-2" data-en="Mathematics" data-ta="கணிதம்">Mathematics</h3>
+              <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-4" data-en="Classes 6 to 12" data-ta="6 முதல் 12 ஆம் வகுப்பு வரை">Classes 6 to 12</p>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Build strong problem-solving skills with daily practice sheets and step-by-step formula explanation." data-ta="தினசரி பயிற்சித் தாள்கள் மற்றும் எளிய முறையில் சூத்திரங்களைக் கற்று கணிதத் திறனை வளர்த்துக் கொள்ளுங்கள்.">
+                Build strong problem-solving skills with daily practice sheets and step-by-step formula explanation.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-[var(--border-color)]">
+              <span class="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
+                <span>📝</span> <span data-en="Daily Practice Sheets" data-ta="தினசரி பயிற்சித் தாள்கள்">Daily Practice Sheets</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Science -->
+          <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl mb-6 shadow-sm">
+                🔬
+              </div>
+              <h3 class="text-xl font-bold mb-2" data-en="Science" data-ta="அறிவியல்">Science</h3>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-4" data-en="Physics, Chemistry & Biology" data-ta="இயற்பியல், வேதியியல் & உயிரியல்">Physics, Chemistry & Biology</p>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Simplified concepts with real-world examples, diagrams, and practical experiment explanations." data-ta="நிஜ வாழ்க்கை உதாரணங்கள் மற்றும் பரிசோதனைகளுடன் அறிவியல் கருத்துக்களை எளிதாகக் கற்றுக் கொள்ளுங்கள்.">
+                Simplified concepts with real-world examples, diagrams, and practical experiment explanations.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-[var(--border-color)]">
+              <span class="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
+                <span>🧪</span> <span data-en="Visual Experiments" data-ta="பரிசோதனை விளக்கம்">Visual Experiments</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- English -->
+          <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-3xl mb-6 shadow-sm">
+                📚
+              </div>
+              <h3 class="text-xl font-bold mb-2" data-en="English" data-ta="ஆங்கிலம்">English</h3>
+              <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-4" data-en="Grammar & Spoken English" data-ta="இலக்கணம் & பேச்சுப் பயிற்சி">Grammar & Spoken English</p>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Master English grammar, essay writing, comprehension, and fluent communication skills." data-ta="ஆங்கில இலக்கணம், கட்டுரை எழுதுதல் மற்றும் சரளமாகப் பேசும் பயிற்சி.">
+                Master English grammar, essay writing, comprehension, and fluent communication skills.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-[var(--border-color)]">
+              <span class="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
+                <span>🗣️</span> <span data-en="Fluency & Grammar" data-ta="திறன் & இலக்கணம்">Fluency & Grammar</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Board Exam Prep -->
+          <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl mb-6 shadow-sm">
+                🎯
+              </div>
+              <h3 class="text-xl font-bold mb-2" data-en="Board Exam Prep" data-ta="தேர்வு தயாரிப்பு">Board Exam Prep</h3>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-4" data-en="Special Coaching for 10th & 12th" data-ta="10 & 12 ஆம் வகுப்பு சிறப்புப் பயிற்சி">Special Coaching for 10th & 12th</p>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Intensive revision plans, previous year question paper practice, and model public exams." data-ta="முன்னாள் ஆண்டு வினாத்தாள்கள் பயிற்சி மற்றும் மாதிரி பொதுத் தேர்வுகள்.">
+                Intensive revision plans, previous year question paper practice, and model public exams.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-[var(--border-color)]">
+              <span class="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
+                <span>🏆</span> <span data-en="Model Public Exams" data-ta="மாதிரி பொதுத் தேர்வுகள்">Model Public Exams</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. How We Teach Section -->
+      <section id="methodology" class="py-20 md:py-28 bg-[var(--bg-secondary)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="Teaching Methodology" data-ta="கற்பித்தல் முறை">Teaching Methodology</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="Why Parents Trust Anugraha Academy" data-ta="பெற்றோர்கள் ஏன் அனுக்கிரகா அகாதமியைத் தேர்ந்தெடுக்கிறார்கள்">Why Parents Trust Anugraha Academy</h2>
+            <p class="text-[var(--text-muted)] text-base md:text-lg" data-en="Our systematic approach ensures students build confidence, discipline, and top-tier academic performance." data-ta="மாணவர்கள் தன்னம்பிக்கை, ஒழுக்கம் மற்றும் சிறந்த கல்வித் திறனைப் பெற எங்களின் முறையான வழிகாட்டுதல் உதவுகிறது.">
+              Our systematic approach ensures students build confidence, discipline, and top-tier academic performance.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 1. Small batches -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card reveal">
+              <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md">
+                01
+              </div>
+              <h3 class="text-xl font-bold mb-3" data-en="Small Batches" data-ta="சிறிய வகுப்புகள்">Small Batches</h3>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Maximum 15 students per batch to ensure individual attention for every child." data-ta="ஒவ்வொரு குழந்தைக்கும் தனி கவனம் செலுத்த வகுப்புக்கு அதிகபட்சம் 15 மாணவர்கள் மட்டுமே.">
+                Maximum 15 students per batch to ensure individual attention for every child.
+              </p>
+            </div>
+
+            <!-- 2. Weekly tests -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card reveal">
+              <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md">
+                02
+              </div>
+              <h3 class="text-xl font-bold mb-3" data-en="Weekly Tests" data-ta="வாராந்திர தேர்வுகள்">Weekly Tests</h3>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Regular weekly tests to track progress and remove exam fear before public exams." data-ta="தேர்வு பயத்தைப் போக்க ஒவ்வொரு வாரமும் முறையான தேர்வுகள்.">
+                Regular weekly tests to track progress and remove exam fear before public exams.
+              </p>
+            </div>
+
+            <!-- 3. Doubt clearing -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card reveal">
+              <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md">
+                03
+              </div>
+              <h3 class="text-xl font-bold mb-3" data-en="Doubt Clearing" data-ta="சந்தேக நிவர்த்தி">Doubt Clearing</h3>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Dedicated 1:1 sessions after class so no student is left behind with unresolved doubts." data-ta="மாணவர்கள் எவரும் சந்தேகங்களுடன் பின் தங்காமல் இருக்க தனிப்பட்ட சந்தேக நிவர்த்தி நேரம்.">
+                Dedicated 1:1 sessions after class so no student is left behind with unresolved doubts.
+              </p>
+            </div>
+
+            <!-- 4. Parent updates -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card reveal">
+              <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md">
+                04
+              </div>
+              <h3 class="text-xl font-bold mb-3" data-en="Parent Updates" data-ta="பெற்றோர் தகவல்">Parent Updates</h3>
+              <p class="text-sm text-[var(--text-muted)] leading-relaxed" data-en="Detailed performance report sent to parents on WhatsApp at the end of every month." data-ta="ஒவ்வொரு மாத இறுதியிலும் மாணவர்களின் முன்னேற்ற அறிக்கை வாட்ஸ்அப் மூலம் அனுப்பப்படும்.">
+                Detailed performance report sent to parents on WhatsApp at the end of every month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Batch Timings Section (sample) -->
+      <section id="timings" class="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="Batch Timings" data-ta="வகுப்பு நேரங்கள்">Batch Timings</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="Flexible Morning & Evening Batches" data-ta="காலை மற்றும் மாலை நேர வகுப்புகள்">Flexible Morning & Evening Batches</h2>
+          <p class="text-[var(--text-muted)] text-base md:text-lg">
+            <span data-en="Choose a convenient time slot for your child." data-ta="உங்கள் குழந்தைக்கு ஏற்ற வகுப்புக் நேரத்தைத் தேர்ந்தெடுக்கவும்.">Choose a convenient time slot for your child.</span>
+            <span class="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-md ml-2 border border-amber-500/20 font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+          </p>
+        </div>
+
+        <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-3xl shadow-xl overflow-hidden reveal">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr class="bg-[var(--bg-secondary)] border-b border-[var(--border-color)] text-xs md:text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">
+                  <th class="p-6" data-en="Batch" data-ta="வகுப்புப் பிரிவு">Batch</th>
+                  <th class="p-6" data-en="Target Classes" data-ta="பிரிவு / வகுப்புகள்">Target Classes</th>
+                  <th class="p-6" data-en="Timings" data-ta="நேரம்">Timings</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[var(--border-color)] text-sm md:text-base font-medium">
+                <tr class="hover:bg-[var(--bg-secondary)]/50 transition-colors">
+                  <td class="p-6 flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                    <span data-en="Morning Batch" data-ta="காலை வகுப்பு">Morning Batch</span>
+                    <span class="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+                  </td>
+                  <td class="p-6 text-[var(--text-muted)]" data-en="10th & 12th Board Students" data-ta="10 மற்றும் 12 ஆம் வகுப்பு">10th & 12th Board Students</td>
+                  <td class="p-6 font-bold text-blue-600 dark:text-blue-400" data-en="6:00 AM – 8:00 AM" data-ta="காலை 6:00 – 8:00 மணி">6:00 AM – 8:00 AM</td>
+                </tr>
+                <tr class="hover:bg-[var(--bg-secondary)]/50 transition-colors">
+                  <td class="p-6 flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                    <span data-en="Evening Batch 1" data-ta="மாலை வகுப்பு 1">Evening Batch 1</span>
+                    <span class="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+                  </td>
+                  <td class="p-6 text-[var(--text-muted)]" data-en="6th to 8th Standard" data-ta="6 முதல் 8 ஆம் வகுப்பு">6th to 8th Standard</td>
+                  <td class="p-6 font-bold text-amber-600 dark:text-amber-400" data-en="5:00 PM – 6:30 PM" data-ta="மாலை 5:00 – 6:30 மணி">5:00 PM – 6:30 PM</td>
+                </tr>
+                <tr class="hover:bg-[var(--bg-secondary)]/50 transition-colors">
+                  <td class="p-6 flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                    <span data-en="Evening Batch 2" data-ta="மாலை வகுப்பு 2">Evening Batch 2</span>
+                    <span class="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+                  </td>
+                  <td class="p-6 text-[var(--text-muted)]" data-en="9th & 10th Standard" data-ta="9 மற்றும் 10 ஆம் வகுப்பு">9th & 10th Standard</td>
+                  <td class="p-6 font-bold text-blue-600 dark:text-blue-400" data-en="6:30 PM – 8:30 PM" data-ta="மாலை 6:30 – 8:30 மணி">6:30 PM – 8:30 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. What Parents Say Section (sample) -->
+      <section id="testimonials" class="py-20 md:py-28 bg-[var(--bg-secondary)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="Testimonials" data-ta="பெற்றோர் கருத்துகள்">Testimonials</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="What Parents Say" data-ta="பெற்றோர்களின் கருத்து">What Parents Say</h2>
+            <p class="text-[var(--text-muted)] text-base md:text-lg">
+              <span data-en="Hear from parents whose children have grown academically with us." data-ta="எங்களிடம் கல்வி பயின்று முன்னேறிய மாணவர்களின் பெற்றோர்களின் கருத்துக்கள்.">Hear from parents whose children have grown academically with us.</span>
+              <span class="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-md ml-2 border border-amber-500/20 font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal relative">
+              <span class="absolute top-6 right-6 text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-md border border-amber-500/20 font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+              <div>
+                <div class="text-amber-500 text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                <p class="text-sm md:text-base text-[var(--text-muted)] italic leading-relaxed mb-6" data-en="&ldquo;Anugraha Academy transformed my son's approach to Mathematics. Small batch size means he gets all his doubts cleared instantly.&rdquo;" data-ta="&ldquo;அனுக்கிரகா அகாதமி என் மகனின் கணிதப் பயத்தைப் போக்கியது. சிறிய வகுப்பு என்பதால் அவன் சந்தேகங்களை உடனடியாகக் கேட்க முடிகிறது.&rdquo;">
+                  &ldquo;Anugraha Academy transformed my son's approach to Mathematics. Small batch size means he gets all his doubts cleared instantly.&rdquo;
+                </p>
+              </div>
+              <div class="pt-4 border-t border-[var(--border-color)]">
+                <h4 class="font-bold text-sm" data-en="Rajesh Kumar" data-ta="ராஜேஷ் குமார்">Rajesh Kumar</h4>
+                <p class="text-xs text-[var(--text-muted)]" data-en="Parent of 10th Student" data-ta="10 ஆம் வகுப்பு மாணவரின் தந்தை">Parent of 10th Student</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal relative">
+              <span class="absolute top-6 right-6 text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-md border border-amber-500/20 font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+              <div>
+                <div class="text-amber-500 text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                <p class="text-sm md:text-base text-[var(--text-muted)] italic leading-relaxed mb-6" data-en="&ldquo;Monthly WhatsApp progress reports keep us fully updated. The teachers are very caring and approachable.&rdquo;" data-ta="&ldquo;மாதாந்திர வாட்ஸ்அப் அறிக்கை எங்கள் பிள்ளையின் முன்னேற்றத்தைத் தெரிந்து கொள்ள உதவுகிறது. ஆசிரியர்கள் மிகவும் கனிவானவர்கள்.&rdquo;">
+                  &ldquo;Monthly WhatsApp progress reports keep us fully updated. The teachers are very caring and approachable.&rdquo;
+                </p>
+              </div>
+              <div class="pt-4 border-t border-[var(--border-color)]">
+                <h4 class="font-bold text-sm" data-en="Priya Sundaram" data-ta="பிரியா சுந்தரம்">Priya Sundaram</h4>
+                <p class="text-xs text-[var(--text-muted)]" data-en="Parent of 8th Student" data-ta="8 ஆம் வகுப்பு மாணவியின் தாய்">Parent of 8th Student</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="p-8 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm hover-card flex flex-col justify-between reveal relative">
+              <span class="absolute top-6 right-6 text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-1 rounded-md border border-amber-500/20 font-semibold" data-en="(sample)" data-ta="(மாதிரி)">(sample)</span>
+              <div>
+                <div class="text-amber-500 text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                <p class="text-sm md:text-base text-[var(--text-muted)] italic leading-relaxed mb-6" data-en="&ldquo;Best tuition center in Porur. Clear conceptual teaching helped my daughter score above 95% in Science.&rdquo;" data-ta="&ldquo;போரூரில் சிறந்த பயிற்சி மையம். அறிவியல் பாடத்தில் என் மகள் 95%க்கு மேல் மதிப்பெண் பெற தெளிவான கற்பித்தல் உதவியது.&rdquo;">
+                  &ldquo;Best tuition center in Porur. Clear conceptual teaching helped my daughter score above 95% in Science.&rdquo;
+                </p>
+              </div>
+              <div class="pt-4 border-t border-[var(--border-color)]">
+                <h4 class="font-bold text-sm" data-en="Karthik R." data-ta="கார்த்திக் ஆர்.">Karthik R.</h4>
+                <p class="text-xs text-[var(--text-muted)]" data-en="Parent of 12th Student" data-ta="12 ஆம் வகுப்பு மாணவரின் தந்தை">Parent of 12th Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ Section using <details> and <summary> -->
+      <section id="faq" class="py-20 md:py-28 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="FAQ" data-ta="கேள்வி-பதில்">FAQ</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="Frequently Asked Questions" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">Frequently Asked Questions</h2>
+          <p class="text-[var(--text-muted)] text-base md:text-lg" data-en="Got questions about admissions, classes, or fees? Find answers here." data-ta="சேர்க்கை, வகுப்புகள் அல்லது கட்டணம் பற்றிய கேள்விகளுக்கான பதில்கள்.">
+            Got questions about admissions, classes, or fees? Find answers here.
+          </p>
+        </div>
+
+        <div class="space-y-4 reveal">
+          <!-- FAQ 1 -->
+          <details class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm group">
+            <summary class="font-bold text-base md:text-lg cursor-pointer flex items-center justify-between list-none">
+              <span data-en="Is the first demo class really free?" data-ta="முதல் மாதிரி வகுப்பு உண்மையில் இலவசமா?">Is the first demo class really free?</span>
+              <span class="transition-transform group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <p class="mt-4 text-sm md:text-base text-[var(--text-muted)] leading-relaxed" data-en="Yes! We offer a completely free demo class so students and parents can experience our teaching methodology before enrolling." data-ta="ஆம்! மாணவர்கள் மற்றும் பெற்றோர்கள் எங்கள் கற்பித்தல் முறையை நேரில் அனுபவிக்க முழுமையான இலவச மாதிரி வகுப்பை வழங்குகிறோம்.">
+              Yes! We offer a completely free demo class so students and parents can experience our teaching methodology before enrolling.
+            </p>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm group">
+            <summary class="font-bold text-base md:text-lg cursor-pointer flex items-center justify-between list-none">
+              <span data-en="What is the fee structure for different classes?" data-ta="பல்வேறு வகுப்புகளுக்கான கட்டணம் என்ன?">What is the fee structure for different classes?</span>
+              <span class="transition-transform group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <p class="mt-4 text-sm md:text-base text-[var(--text-muted)] leading-relaxed" data-en="Fees vary based on the grade level and subjects chosen. Please contact us via WhatsApp or phone for detailed fee information." data-ta="வகுப்புகள் மற்றும் பாடங்களின் அடிப்படையில் கட்டணம் மாறுபடும். விவரமான கட்டண விவரங்களுக்கு வாட்ஸ்அப் அல்லது தொலைபேசி மூலம் எங்களைத் தொடர்பு கொள்ளவும்.">
+              Fees vary based on the grade level and subjects chosen. Please contact us via WhatsApp or phone for detailed fee information.
+            </p>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm group">
+            <summary class="font-bold text-base md:text-lg cursor-pointer flex items-center justify-between list-none">
+              <span data-en="Which school boards do you support?" data-ta="எந்தப் பள்ளி பாடத்திட்டங்களுக்கு பயிற்சி அளிக்கப்படுகிறது?">Which school boards do you support?</span>
+              <span class="transition-transform group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <p class="mt-4 text-sm md:text-base text-[var(--text-muted)] leading-relaxed" data-en="We support both State Board (Samacheer Kalvi) and CBSE syllabus for all subjects from Class 6 to Class 12." data-ta="6 முதல் 12 ஆம் வகுப்பு வரை சமச்சீர் கல்வி (State Board) மற்றும் CBSE ஆகிய இரண்டு பாடத்திட்டங்களுக்கும் பயிற்சி அளிக்கிறோம்.">
+              We support both State Board (Samacheer Kalvi) and CBSE syllabus for all subjects from Class 6 to Class 12.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. Enquiry & Visit Section -->
+      <section id="enquiry" class="py-20 md:py-28 bg-[var(--bg-secondary)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20" data-en="Enquiry & Visit" data-ta="சேர்க்கை மற்றும் வருகை">Enquiry & Visit</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4 tracking-tight" data-en="Book Your Free Demo Class Today" data-ta="இன்றே இலவச மாதிரி வகுப்பைப் பதிவு செய்யுங்கள்">Book Your Free Demo Class Today</h2>
+            <p class="text-[var(--text-muted)] text-base md:text-lg" data-en="Fill out the form below to send your enquiry directly to our WhatsApp or visit our center in Porur." data-ta="கீழിലുള്ള படிவத்தை நிரப்பி வாட்ஸ்அப் மூலம் உடனடியாக விசாரிக்கவும் அல்லது போரூரில் உள்ள எங்களை நேரில் சந்திக்கவும்.">
+              Fill out the form below to send your enquiry directly to our WhatsApp or visit our center in Porur.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Form Card -->
+            <div class="lg:col-span-7 p-8 md:p-10 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-xl reveal">
+              <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span>📝</span> <span data-en="Student Enquiry Form" data-ta="மாணவர் சேர்க்கைப் படிவம்">Student Enquiry Form</span>
+              </h3>
+              <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)" class="space-y-5">
+                <div>
+                  <label class="block text-sm font-semibold mb-2" for="name" data-en="Parent / Student Name" data-ta="பெற்றோர் / மாணவர் பெயர்">Parent / Student Name</label>
+                  <input type="text" id="name" required placeholder="e.g. Ramesh Kumar" data-en-placeholder="e.g. Ramesh Kumar" data-ta-placeholder="எ.கா. ரமேஷ் குமார்" class="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] focus:ring-2 focus:ring-blue-600 outline-none transition-all text-sm font-medium" />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-semibold mb-2" for="phone" data-en="Phone Number" data-ta="தொலைபேசி எண்">Phone Number</label>
+                  <input type="tel" id="phone" required placeholder="e.g. 9840012345" data-en-placeholder="e.g. 9840012345" data-ta-placeholder="எ.கா. 9840012345" class="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] focus:ring-2 focus:ring-blue-600 outline-none transition-all text-sm font-medium" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="block text-sm font-semibold mb-2" for="class-select" data-en="Select Class" data-ta="வகுப்பைத் தேர்ந்தெடுக்கவும்">Select Class</label>
+                    <select id="class-select" required class="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] focus:ring-2 focus:ring-blue-600 outline-none transition-all text-sm font-medium">
+                      <option value="" disabled selected data-en="Choose class" data-ta="வகுப்பைத் தேர்ந்தெடுக்கவும்">Choose class</option>
+                      <option value="Class 6" data-en="Class 6" data-ta="6 ஆம் வகுப்பு">Class 6</option>
+                      <option value="Class 7" data-en="Class 7" data-ta="7 ஆம் வகுப்பு">Class 7</option>
+                      <option value="Class 8" data-en="Class 8" data-ta="8 ஆம் வகுப்பு">Class 8</option>
+                      <option value="Class 9" data-en="Class 9" data-ta="9 ஆம் வகுப்பு">Class 9</option>
+                      <option value="Class 10" data-en="Class 10" data-ta="10 ஆம் வகுப்பு">Class 10</option>
+                      <option value="Class 11" data-en="Class 11" data-ta="11 ஆம் வகுப்பு">Class 11</option>
+                      <option value="Class 12" data-en="Class 12" data-ta="12 ஆம் வகுப்பு">Class 12</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-semibold mb-2" for="subject-select" data-en="Select Subject" data-ta="பாடத்தைத் தேர்ந்தெடுக்கவும்">Select Subject</label>
+                    <select id="subject-select" required class="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] focus:ring-2 focus:ring-blue-600 outline-none transition-all text-sm font-medium">
+                      <option value="" disabled selected data-en="Choose subject" data-ta="பாடத்தைத் தேர்ந்தெடுக்கவும்">Choose subject</option>
+                      <option value="Mathematics" data-en="Mathematics" data-ta="கணிதம்">Mathematics</option>
+                      <option value="Science" data-en="Science" data-ta="அறிவியல்">Science</option>
+                      <option value="English" data-en="English" data-ta="ஆங்கிலம்">English</option>
+                      <option value="All Subjects" data-en="All Subjects" data-ta="அனைத்துப் பாடங்களும்">All Subjects</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/25 transition-all text-base flex items-center justify-center gap-2 cursor-pointer">
+                  <span>💬</span>
+                  <span data-en="Submit Enquiry via WhatsApp" data-ta="வாட்ஸ்அப் மூலம் விசாரிக்கவும்">Submit Enquiry via WhatsApp</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Visit Us Card -->
+            <div class="lg:col-span-5 p-8 md:p-10 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-xl reveal space-y-6">
+              <h3 class="text-xl font-bold flex items-center gap-2">
+                <span>📍</span> <span data-en="Visit Our Center" data-ta="எங்கள் மையத்திற்கு வருகை தரவும்">Visit Our Center</span>
+              </h3>
+              
+              <div class="space-y-4 text-sm">
+                <div>
+                  <h4 class="font-bold text-[var(--text-muted)] text-xs uppercase tracking-wider mb-1" data-en="Address" data-ta="முகவரி">Address</h4>
+                  <p class="font-medium leading-relaxed" data-en="Anugraha Academy, Near Porur Junction, Porur, Chennai - 600116" data-ta="அனுக்கிரகா அகாதமி, போரூர் சந்திப்பு அருகில், போரூர், சென்னை - 600116">
+                    Anugraha Academy, Near Porur Junction, Porur, Chennai - 600116
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-[var(--text-muted)] text-xs uppercase tracking-wider mb-1" data-en="Opening Hours (sample):" data-ta="செயல்படும் நேரம் (மாதிரி):">Opening Hours (sample):</h4>
+                  <p class="font-medium leading-relaxed whitespace-pre-line" data-en="Monday – Saturday: 5:00 AM – 9:00 PM&#10;Sunday: 8:00 AM – 1:00 PM" data-ta="திங்கள் – சனி: காலை 5:00 – இரவு 9:00 மணி&#10;ஞாயிறு: காலை 8:00 – மதியம் 1:00 மணி">
+                    Monday – Saturday: 5:00 AM – 9:00 PM
+                    Sunday: 8:00 AM – 1:00 PM
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-[var(--text-muted)] text-xs uppercase tracking-wider mb-1" data-en="Contact Phone" data-ta="தொடர்பு எண்">Contact Phone</h4>
+                  <p class="font-medium text-blue-600 dark:text-blue-400">
+                    +91 88383 40480
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-[var(--border-color)]">
+                <a href="https://www.google.com/maps/search/Anugraha+Academy+Porur+Chennai" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-secondary)] hover:border-blue-600 hover:text-blue-600 font-semibold transition-all flex items-center justify-center gap-2 text-sm shadow-sm">
+                  <span>🗺️</span>
+                  <span data-en="Get Directions on Google Maps" data-ta="கூகுள் மேப்பில் வழிகாட்டுதலைப் பெறுக">Get Directions on Google Maps</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--bg-card)] border-t border-[var(--border-color)] py-12 text-center text-sm text-[var(--text-muted)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+        <p data-en="&copy; 2026 Anugraha Academy. All rights reserved." data-ta="&copy; 2026 அனுக்கிரகா அகாதமி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">
+          &copy; 2026 Anugraha Academy. All rights reserved.
+        </p>
+        <p class="text-xs">
+          <span data-en="Sample page created for demonstration." data-ta="காட்சிப்படுத்தலுக்காக உருவாக்கப்பட்ட மாதிரி பக்கம்.">Sample page created for demonstration.</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Fixed Bottom Bar for Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-card)] border-t border-[var(--border-color)] p-3 flex gap-3 shadow-2xl backdrop-blur-md">
+      <a id="mobile-call-btn" href="tel:918838340480" class="flex-1 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+        <span>📞</span> <span data-en="Call Now" data-ta="அழைக்க">Call Now</span>
+      </a>
+      <a id="mobile-wa-btn" href="https://wa.me/918838340480?text=Hello%20Anugraha%20Academy,%20I%20would%20like%20to%20know%20more%20about%20tuition%20classes." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+        <span>💬</span> <span data-en="WhatsApp" data-ta="வாட்ஸ்அப்">WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // WhatsApp configuration variable
+      var PHONE = "918838340480"; // Replace with real tuition center WhatsApp number
+
+      var currentLang = 'en';
+
+      function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'ta' : 'en';
+        document.documentElement.setAttribute('lang', currentLang);
+
+        // Update elements with data-en and data-ta
+        var elements = document.querySelectorAll('[data-en][data-ta]');
+        elements.forEach(function(el) {
+          var text = el.getAttribute('data-' + currentLang);
+          if (text) {
+            el.innerHTML = text;
+          }
+        });
+
+        // Update placeholders
+        var inputs = document.querySelectorAll('[data-en-placeholder][data-ta-placeholder]');
+        inputs.forEach(function(input) {
+          var ph = input.getAttribute('data-' + currentLang + '-placeholder');
+          if (ph) {
+            input.setAttribute('placeholder', ph);
+          }
+        });
+
+        // Update language button label
+        var langLabel = document.getElementById('lang-label');
+        if (langLabel) {
+          langLabel.textContent = currentLang === 'en' ? 'தமிழ்' : 'English';
+        }
+      }
+
+      // Handle enquiry form submission via WhatsApp
+      function handleEnquirySubmit(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var classVal = document.getElementById('class-select').value;
+        var subjectVal = document.getElementById('subject-select').value;
+
+        var message = "Hello Anugraha Academy,%0A%0A" +
+                      "I would like to enquire about tuition classes:%0A" +
+                      "- Name: " + encodeURIComponent(name) + "%0A" +
+                      "- Phone: " + encodeURIComponent(phone) + "%0A" +
+                      "- Class: " + encodeURIComponent(classVal) + "%0A" +
+                      "- Subject: " + encodeURIComponent(subjectVal);
+
+        var waUrl = "https://wa.me/" + PHONE + "?text=" + message;
+        window.open(waUrl, '_blank');
+      }
+
+      // Intersection Observer for scroll-reveal effect with fallback
+      document.addEventListener("DOMContentLoaded", function() {
+        // Update phone links dynamically from PHONE variable
+        var callBtn = document.getElementById('mobile-call-btn');
+        if (callBtn) {
+          callBtn.setAttribute('href', 'tel:' + PHONE);
+        }
+
+        var waBtn = document.getElementById('mobile-wa-btn');
+        if (waBtn) {
+          waBtn.setAttribute('href', 'https://wa.me/' + PHONE + '?text=Hello%20Anugraha%20Academy,%20I%20would%20like%20to%20know%20more%20about%20tuition%20classes.');
+        }
+
+        // Reveal animation observer
+        var reveals = document.querySelectorAll('.reveal');
+
+        if ('IntersectionObserver' in window) {
+          var observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+          };
+
+          var observer = new IntersectionObserver(function(entries, observerInstance) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observerInstance.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+
+          reveals.forEach(function(el) {
+            observer.observe(el);
+          });
+        } else {
+          // Fallback if IntersectionObserver is not supported
+          reveals.forEach(function(el) {
+            el.classList.add('active');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
